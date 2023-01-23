@@ -3,6 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const webdriver = require("selenium-webdriver");
+const chromedriver = require('chromedriver');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
