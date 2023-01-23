@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Join Remote Support Session &#x7c;</title>
+
+    <link rel="stylesheet" href="css/join.css">
+    <!-- Page Sense JS -->
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="join-header"></div>
+      <div class="join-container">
+        <form
+          action="/"
+          method="POST"
+        >
+          <div class="join-header-txt">Join Remote Support Session</div>
+
+          <div class="join-field">
+            <input
+              type="text"
+              name="SessionID"
+              class="join-txt-box"
+              placeholder="Enter Session ID"
+              id="sessionKey"
+              onkeypress="return isNumber(event)"
+              onkeyup="handleChange(event)"
+              autofocus="autofocus"
+              autocomplete="off"
+              value=""
+            /><span class="labelspan">Session ID</span>
+            <span id="key_error" class="error-txt">Enter Session ID</span>
+          </div>
+          <div class="join-field">
+            <input
+              type="text"
+              name="NameClient"
+              class="join-txt-box name-email"
+              placeholder="Enter your name"
+              id="emailID"
+              autocomplete="off"
+              value=""
+              onkeypress="hideNameErr()"
+            /><span class="labelspan">Name</span>
+            <span id="email_error" class="error-txt">Enter your name</span>
+          </div>
+          <input
+            type="hidden"
+            name="join_source"
+            id="join_source"
+            value="JOIN_PAGE"
+          /><input type="hidden" name="src" id="src" value="" /><input
+            type="hidden"
+            name="language"
+            id="language"
+            value="en"
+          /><input
+            type="submit"
+            class="join-btn disabled"
+            value="JOIN SESSION"
+            id="joinBTN"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
